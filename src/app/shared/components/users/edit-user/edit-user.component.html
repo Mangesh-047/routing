@@ -1,0 +1,13 @@
+<div class="col-md-4">
+
+    <div class="form-group">
+        <label for="uname">User Name</label>
+        <input type="text" #uname class="form-control" [value]="userObj.fname">
+    </div>
+    <div class="text-right">
+        <!-- <button class="btn btn-warning" (click)="onUpdateUser(uname)">Update UserName</button> -->
+
+        <button mat-raised-button color="accent" (click)="onUpdateUser(uname)">Update UserName</button>
+
+    </div>
+</div>

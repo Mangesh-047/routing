@@ -1,0 +1,22 @@
+<div class="col-md-4">
+    <div class="form-group">
+        <label for="pname">Product Name</label>
+        <input type="text" class="form-control" [value]="prodObj.pname" #pname>
+    </div>
+
+    <div class="form-group">
+        <select name="" id="" class="form-control" [value]="prodObj.pstatus" #pstatus>
+            <option value="In Progress">In Progress</option>
+            <option value="Dispatched">Dispatched</option>
+            <option value="Delivered">Delivered</option>
+        </select>
+    </div>
+
+    <div class="text-right">
+
+        <!-- <button class="btn btn-warning" (click)="onUpdate(pname, pstatus)">Update Product</button> -->
+
+        <button mat-raised-button color="accent" (click)="onUpdate(pname, pstatus)">Update Product</button>
+
+    </div>
+</div>

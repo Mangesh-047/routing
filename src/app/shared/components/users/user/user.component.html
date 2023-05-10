@@ -1,0 +1,18 @@
+<div class="col-md-4">
+    <div class="card">
+        <div class="card-body">
+            <p>the user name is <strong>{{userObj.fname}}</strong> </p>
+            <p>and its ID <strong>{{userObj.id}}</strong></p>
+
+            <div class="text-right">
+
+                <!-- <button class="btn btn-primary" (click)="onEditUser()">Edit User</button> -->
+
+                <button mat-raised-button color="primary" (click)="onEditUser()">Edit User</button>
+
+            </div>
+            <hr>
+            <a routerLink="/users/4">Load James</a>
+        </div>
+    </div>
+</div>
