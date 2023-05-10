@@ -13,4 +13,4 @@ export enum pstatus {
 
 
 
-console.log(pstatus.dis);
+// console.log(pstatus.dis);
