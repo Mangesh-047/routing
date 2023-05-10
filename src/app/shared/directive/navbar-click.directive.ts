@@ -10,7 +10,7 @@ export class NavbarClickDirective {
 
   @HostListener('click', ['$event'])
   onclick(eve: Event) {
-    console.log(eve.target);
+    // console.log(eve.target);
     let el = eve.target as HTMLElement
 
     // console.log(el.closest('button')?.nextElementSibling);
