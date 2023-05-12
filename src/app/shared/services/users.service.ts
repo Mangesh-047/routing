@@ -49,6 +49,6 @@ export class UsersService {
       }
     })
 
-    this._snackbarService.snackbarOpen(`The username is Update to ${obj.fname}`)
+    this._snackbarService.snackbarOpen(`The username is Updated to ${obj.fname}`)
   }
 }
