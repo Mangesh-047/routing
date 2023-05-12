@@ -27,14 +27,18 @@ export class UserComponent implements OnInit {
 
     this._route.params
       .subscribe((res) => {
-        console.log(res['userId'])
+        // console.log(res['userId'])
 
         this.userID = +res['userId']
         this.userObj = this._userService.getUser(this.userID)!
       })
+
+
   }
 
   onEditUser() {
-    this._router.navigate(['/users', this.userID, 'edit'])
+    this._router.navigate(['/users', this.userID, 'edit'], {
+      queryParamsHandling: 'preserve'
+    })
   }
 }

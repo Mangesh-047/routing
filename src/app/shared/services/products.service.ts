@@ -10,22 +10,26 @@ export class ProductsService {
     {
       pname: 'Samsung S21',
       pid: 1,
-      pstatus: pstatus.del
+      pstatus: pstatus.del,
+      canReturn: 1
     },
     {
-      pname: 'Iphone 12',
+      pname: 'Iphone 13',
       pid: 2,
-      pstatus: pstatus.dis
+      pstatus: pstatus.dis,
+      canReturn: 0
     },
     {
       pname: 'Vivo',
       pid: 3,
-      pstatus: pstatus.dis
+      pstatus: pstatus.dis,
+      canReturn: 1
     },
     {
       pname: 'Sony',
       pid: 4,
-      pstatus: pstatus.inp
+      pstatus: pstatus.inp,
+      canReturn: 0
     }
   ]
   constructor(

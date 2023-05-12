@@ -2,6 +2,7 @@ export interface Iproduct {
     pname: string,
     pid: number,
     pstatus: pstatus
+    canReturn: 1 | 0
 }
 
 
@@ -11,6 +12,3 @@ export enum pstatus {
     del = 'Delivered'
 }
 
-
-
-// console.log(pstatus.dis);

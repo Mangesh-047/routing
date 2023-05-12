@@ -13,6 +13,7 @@ export class EditUserComponent implements OnInit {
 
   userObj!: Iuser;
   userID!: number
+  canEditUser!: 'user' | 'admin'
   constructor(
     private _router: Router,
     private _route: ActivatedRoute,
@@ -28,6 +29,14 @@ export class EditUserComponent implements OnInit {
         this.userObj = this._usersService.getUser(this.userID)
 
       })
+
+    this._route.queryParams
+      .subscribe(res => {
+        this.canEditUser = res['canEdit']
+        // console.log(this.canEditUser);
+
+
+      })
   }
 
 
@@ -35,8 +44,11 @@ export class EditUserComponent implements OnInit {
 
     let obj: Iuser = {
       fname: uname.value,
-      id: this.userID
+      id: this.userID,
+      userRole: this.userObj.userRole
     }
+
+
 
     this._usersService.updateUser(obj)
 

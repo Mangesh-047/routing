@@ -1,6 +1,7 @@
 <div class="col-md-3">
     <ul class="list-group">
-        <li class="list-group-item" *ngFor="let prod of productArray" [routerLink]="['/products', prod.pid]">
+        <li class="list-group-item" *ngFor="let prod of productArray" [routerLink]="['/products', prod.pid]"
+            [queryParams]="{canEdit: prod.canReturn}">
             {{prod.pname}}
         </li>
     </ul>

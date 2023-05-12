@@ -10,19 +10,23 @@ export class UsersService {
   usersArray: Iuser[] = [
     {
       fname: 'Jhon',
-      id: 1
+      id: 1,
+      userRole: 'admin'
     },
     {
       fname: 'Jhonny',
-      id: 2
+      id: 2,
+      userRole: 'user'
     },
     {
-      fname: 'Jhonnie',
-      id: 3
+      fname: 'Jennie',
+      id: 3,
+      userRole: 'user'
     },
     {
       fname: 'James',
-      id: 4
+      id: 4,
+      userRole: 'admin'
     }
   ]
   constructor(

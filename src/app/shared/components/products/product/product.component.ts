@@ -29,6 +29,8 @@ export class ProductComponent implements OnInit {
   }
 
   onEditProduct() {
-    this._router.navigate(['/products', this.productId, 'edit'])
+    this._router.navigate(['/products', this.productId, 'edit'], {
+      queryParamsHandling: 'preserve'
+    })
   }
 }
