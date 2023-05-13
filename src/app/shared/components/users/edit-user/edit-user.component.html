@@ -3,13 +3,14 @@
 
     <div class="form-group">
         <label for="uname">User Name</label>
-        <input type="text" #uname class="form-control" [value]="userObj.fname" [disabled]="canEditUser === 'user'">
+        <input type="text" #uname class="form-control" [value]="userObj.fname"
+            [disabled]="canEditUser.includes('user')">
     </div>
     <div class="text-right mb-3">
         <!-- <button class="btn btn-warning" (click)="onUpdateUser(uname)">Update UserName</button> -->
 
         <button mat-raised-button color="accent" (click)="onUpdateUser(uname)"
-            [disabled]="canEditUser === 'user'">Update UserName</button>
+            [disabled]="canEditUser.includes('user')">Update UserName</button>
     </div>
 
 

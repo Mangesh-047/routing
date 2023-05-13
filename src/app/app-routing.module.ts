@@ -11,12 +11,24 @@ import { EditUserComponent } from './shared/components/users/edit-user/edit-user
 
 const routes: Routes = [
   { path: '', component: DashboardComponent },
-  { path: 'users', component: UsersComponent },
-  { path: 'products', component: ProductsComponent },
-  { path: 'users/:userId', component: UserComponent },
-  { path: 'users/:userId/edit', component: EditUserComponent },
-  { path: 'products/:productId', component: ProductComponent },
-  { path: 'products/:productId/edit', component: EditProductComponent },
+  {
+    path: 'users', component: UsersComponent,
+    children: [
+      { path: ':userId', component: UserComponent },
+      { path: ':userId/edit', component: EditUserComponent },
+    ]
+  },
+  // { path: 'users/:userId', component: UserComponent },
+  // { path: 'users/:userId/edit', component: EditUserComponent },
+  {
+    path: 'products', component: ProductsComponent,
+    children: [
+      { path: ':productId', component: ProductComponent },
+      { path: ':productId/edit', component: EditProductComponent }
+    ]
+  },
+  // { path: 'products/:productId', component: ProductComponent },
+  // { path: 'products/:productId/edit', component: EditProductComponent },
   { path: 'page-not-found', component: PageNotFoundComponent },
   { path: '**', redirectTo: 'page-not-found' }
 ];
