@@ -8,11 +8,13 @@ import { PageNotFoundComponent } from './shared/components/page-not-found/page-n
 import { ProductComponent } from './shared/components/products/product/product.component';
 import { EditProductComponent } from './shared/components/products/edit-product/edit-product.component';
 import { EditUserComponent } from './shared/components/users/edit-user/edit-user.component';
+import { AuthGaurd } from './shared/services/auth.guard';
 
 const routes: Routes = [
   { path: '', component: DashboardComponent },
   {
     path: 'users', component: UsersComponent,
+    canActivate: [AuthGaurd],
     children: [
       { path: ':userId', component: UserComponent },
       { path: ':userId/edit', component: EditUserComponent },
@@ -22,6 +24,7 @@ const routes: Routes = [
   // { path: 'users/:userId/edit', component: EditUserComponent },
   {
     path: 'products', component: ProductsComponent,
+    canActivate: [AuthGaurd],
     children: [
       { path: ':productId', component: ProductComponent },
       { path: ':productId/edit', component: EditProductComponent }

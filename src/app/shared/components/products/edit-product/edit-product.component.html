@@ -1,5 +1,6 @@
-<p *ngIf="canEditProduct === 0" class="alert alert-danger">can't change product information</p>
-<div class="col-md-4">
+<div class="form shadow p-4 bg-white rounded">
+    <p *ngIf="canEditProduct === 0" class="alert alert-danger">can't change product information</p>
+
 
     <div class="form-group">
         <label for="pname">Product Name</label>
@@ -24,6 +25,4 @@
             Product</button>
 
     </div>
-
-
 </div>

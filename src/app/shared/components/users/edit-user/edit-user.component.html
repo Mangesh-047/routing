@@ -1,5 +1,5 @@
-<p *ngIf="canEditUser === 'user'" class="alert alert-danger">can't change user information</p>
-<div class="col-md-4">
+<div class="form shadow p-4 bg-white rounded">
+    <p *ngIf="canEditUser === 'user'" class="alert alert-danger">can't change user information</p>
 
     <div class="form-group">
         <label for="uname">User Name</label>
@@ -12,6 +12,4 @@
         <button mat-raised-button color="accent" (click)="onUpdateUser(uname)"
             [disabled]="canEditUser.includes('user')">Update UserName</button>
     </div>
-
-
 </div>

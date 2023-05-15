@@ -10,11 +10,11 @@ export class SnackbarService {
     private _snackBar: MatSnackBar
   ) { }
 
-  snackbarOpen(msg: string) {
+  snackbarOpen(msg: string, time: number = 3000) {
     this._snackBar.open(msg, 'Close', {
       horizontalPosition: 'center',
       verticalPosition: 'top',
-      duration: 3000
+      duration: time
     })
   }
 }
