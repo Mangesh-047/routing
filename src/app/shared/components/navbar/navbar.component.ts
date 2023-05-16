@@ -20,8 +20,12 @@ export class NavbarComponent implements OnInit {
     this._authService.loginToApp()
 
   }
-  onLogout() {
+  onLogout(navbtn: HTMLElement) {
     this._authService.logOutToApp()
+    navbtn.classList.remove('show')
+    // console.log(navbtn);
+
+
 
   }
 

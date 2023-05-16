@@ -1,14 +1,14 @@
 <nav class="navbar navbar-expand-lg navbar-bg navbar-dark">
-    <a class="navbar-brand" routerLink="/">Navbar</a>
+    <a class="navbar-brand" routerLink="/home">Navbar</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon" appNavbarClick></span>
     </button>
 
-    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+    <div class="collapse navbar-collapse " id="navbarSupportedContent" #navbtn>
         <ul class="navbar-nav ml-auto">
             <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">
-                <a class="nav-link" routerLink="/">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" routerLink="/home">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item" routerLinkActive="active">
                 <a class="nav-link" routerLink="/users">Users</a>
@@ -19,10 +19,15 @@
             </li>
         </ul>
 
+        <!-- 
+        <button class="btn btn-success my-2 my-sm-0" (click)="onLogin()" type="submit" *ngIf="isLoginBtn">Log
+            In</button> -->
 
-        <button class="btn btn-success my-2 my-sm-0" (click)="onLogin()" type="submit">Log In</button>
+        <!-- <button class="btn btn-danger my-2 my-sm-0 ml-2" type="submit" (click)="onLogout()">Log
+            Out</button> -->
 
-        <button class="btn btn-danger my-2 my-sm-0 ml-2" type="submit" (click)="onLogout()">Log Out</button>
+        <button mat-flat-button color="warn" (click)="onLogout(navbtn)" class="float-right">Log Out</button>
+
 
     </div>
 </nav>

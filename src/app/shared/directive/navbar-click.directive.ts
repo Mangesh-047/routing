@@ -16,6 +16,4 @@ export class NavbarClickDirective {
     // console.log(el.closest('button')?.nextElementSibling);
     el.closest('button')?.nextElementSibling?.classList.toggle('show')
   }
-
-
 }

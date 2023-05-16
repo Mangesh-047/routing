@@ -17,14 +17,19 @@ export class AuthService {
 
   isAuthenticated(): Promise<boolean> {
     return new Promise((res, rej) => {
+      this.isUserLogin = Boolean(localStorage.getItem('token')) ?? false
       res(this.isUserLogin);
     })
   }
 
   loginToApp() {
     this._snackbarService.snackbarOpen(`Login Successfully`, 1000)
-
     this.isUserLogin = true
+
+    localStorage.setItem('userRole', 'admin')
+    localStorage.setItem('token', 'JWT TOKEN')
+
+    this._router.navigate(['/home'])
 
   }
 

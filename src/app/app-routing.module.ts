@@ -9,12 +9,16 @@ import { ProductComponent } from './shared/components/products/product/product.c
 import { EditProductComponent } from './shared/components/products/edit-product/edit-product.component';
 import { EditUserComponent } from './shared/components/users/edit-user/edit-user.component';
 import { AuthGaurd } from './shared/services/auth.guard';
+import { LoginComponent } from './shared/components/login/login.component';
 
 const routes: Routes = [
-  { path: '', component: DashboardComponent },
+  { path: '', component: LoginComponent },
+  { path: 'home', component: DashboardComponent },
   {
     path: 'users', component: UsersComponent,
-    canActivate: [AuthGaurd],
+    // canActivate: [AuthGaurd],
+    canActivateChild: [AuthGaurd],
+
     children: [
       { path: ':userId', component: UserComponent },
       { path: ':userId/edit', component: EditUserComponent },
@@ -24,7 +28,8 @@ const routes: Routes = [
   // { path: 'users/:userId/edit', component: EditUserComponent },
   {
     path: 'products', component: ProductsComponent,
-    canActivate: [AuthGaurd],
+    // canActivate: [AuthGaurd],
+    canActivateChild: [AuthGaurd],
     children: [
       { path: ':productId', component: ProductComponent },
       { path: ':productId/edit', component: EditProductComponent }

@@ -15,6 +15,7 @@ import { MaterialModule } from './shared/material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EditUserComponent } from './shared/components/users/edit-user/edit-user.component';
 import { NavbarClickDirective } from './shared/directive/navbar-click.directive';
+import { LoginComponent } from './shared/components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { NavbarClickDirective } from './shared/directive/navbar-click.directive'
     ProductComponent,
     EditProductComponent,
     EditUserComponent,
-    NavbarClickDirective
+    NavbarClickDirective,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
